@@ -14,3 +14,133 @@
 }
 2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
 2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-21 00:06:49,236 p=39907 u=quintero n=ansible | [WARNING]: Unable to parse /home/quintero/UTN-FRA_SO_Examenes/202406/ansible/hosts as
+an inventory source
+
+2026-06-21 00:06:49,251 p=39907 u=quintero n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2026-06-21 00:06:49,257 p=39907 u=quintero n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the
+implicit localhost does not match 'all'
+
+2026-06-21 00:06:49,931 p=39907 u=quintero n=ansible | PLAY [all] *****************************************************************************
+2026-06-21 00:06:49,932 p=39907 u=quintero n=ansible | skipping: no hosts matched
+2026-06-21 00:06:49,932 p=39907 u=quintero n=ansible | PLAY RECAP *****************************************************************************
+2026-06-21 00:08:25,200 p=39982 u=quintero n=ansible | [WARNING]: Unable to parse /home/quintero/UTN-FRA_SO_Examenes/202406/ansible/hosts as
+an inventory source
+
+2026-06-21 00:08:25,201 p=39982 u=quintero n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2026-06-21 00:08:25,207 p=39982 u=quintero n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the
+implicit localhost does not match 'all'
+
+2026-06-21 00:08:25,499 p=39982 u=quintero n=ansible | PLAY [all] *****************************************************************************
+2026-06-21 00:08:25,499 p=39982 u=quintero n=ansible | skipping: no hosts matched
+2026-06-21 00:08:25,499 p=39982 u=quintero n=ansible | PLAY RECAP *****************************************************************************
+2026-06-21 00:14:17,263 p=40986 u=quintero n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2026-06-21 00:14:17,551 p=40986 u=quintero n=ansible | PLAY [all] *****************************************************************************
+2026-06-21 00:14:17,593 p=40986 u=quintero n=ansible | TASK [Gathering Facts] *****************************************************************
+2026-06-21 00:14:18,033 p=40986 u=quintero n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nquintero@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-21 00:14:20,863 p=40986 u=quintero n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter
+at /usr/bin/python3.10, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-21 00:14:20,863 p=40986 u=quintero n=ansible | ok: [localhost]
+2026-06-21 00:14:20,884 p=40986 u=quintero n=ansible | TASK [include_role : 2do_parcial] ******************************************************
+2026-06-21 00:14:20,977 p=40986 u=quintero n=ansible | included: 2do_parcial for localhost
+2026-06-21 00:14:20,995 p=40986 u=quintero n=ansible | TASK [2do_parcial : debug] *************************************************************
+2026-06-21 00:14:21,019 p=40986 u=quintero n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-21 00:14:21,038 p=40986 u=quintero n=ansible | TASK [2do_parcial : Crear estructura de directorios para parcial] **********************
+2026-06-21 00:14:21,726 p=40986 u=quintero n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2026-06-21 00:14:22,095 p=40986 u=quintero n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2026-06-21 00:14:22,115 p=40986 u=quintero n=ansible | TASK [2do_parcial : Generar archivo datos_alumno.txt] **********************************
+2026-06-21 00:14:23,291 p=40986 u=quintero n=ansible | changed: [localhost]
+2026-06-21 00:14:23,308 p=40986 u=quintero n=ansible | TASK [2do_parcial : Generar archivo datos_equipo.txt] **********************************
+2026-06-21 00:14:24,052 p=40986 u=quintero n=ansible | changed: [localhost]
+2026-06-21 00:14:24,071 p=40986 u=quintero n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores] *******************
+2026-06-21 00:14:24,443 p=40986 u=quintero n=ansible | fatal: [localhost]: FAILED! => {"msg": "Failed to get information on remote file (/etc/sudoers.d/2psupervisores): Permission denied"}
+2026-06-21 00:14:24,445 p=40986 u=quintero n=ansible | PLAY RECAP *****************************************************************************
+2026-06-21 00:14:24,445 p=40986 u=quintero n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-21 00:14:24,445 p=40986 u=quintero n=ansible | localhost                  : ok=6    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-06-21 00:14:39,140 p=41240 u=quintero n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2026-06-21 00:14:39,445 p=41240 u=quintero n=ansible | PLAY [all] *****************************************************************************
+2026-06-21 00:14:39,458 p=41240 u=quintero n=ansible | TASK [Gathering Facts] *****************************************************************
+2026-06-21 00:14:39,671 p=41240 u=quintero n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nquintero@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-21 00:14:41,564 p=41240 u=quintero n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter
+at /usr/bin/python3.10, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-21 00:14:41,565 p=41240 u=quintero n=ansible | ok: [localhost]
+2026-06-21 00:14:41,585 p=41240 u=quintero n=ansible | TASK [include_role : 2do_parcial] ******************************************************
+2026-06-21 00:14:41,636 p=41240 u=quintero n=ansible | included: 2do_parcial for localhost
+2026-06-21 00:14:41,655 p=41240 u=quintero n=ansible | TASK [2do_parcial : debug] *************************************************************
+2026-06-21 00:14:41,679 p=41240 u=quintero n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-21 00:14:41,698 p=41240 u=quintero n=ansible | TASK [2do_parcial : Crear estructura de directorios para parcial] **********************
+2026-06-21 00:14:42,340 p=41240 u=quintero n=ansible | ok: [localhost] => (item=/tmp/2do_parcial/alumno)
+2026-06-21 00:14:42,704 p=41240 u=quintero n=ansible | ok: [localhost] => (item=/tmp/2do_parcial/equipo)
+2026-06-21 00:14:42,723 p=41240 u=quintero n=ansible | TASK [2do_parcial : Generar archivo datos_alumno.txt] **********************************
+2026-06-21 00:14:43,792 p=41240 u=quintero n=ansible | ok: [localhost]
+2026-06-21 00:14:43,809 p=41240 u=quintero n=ansible | TASK [2do_parcial : Generar archivo datos_equipo.txt] **********************************
+2026-06-21 00:14:44,569 p=41240 u=quintero n=ansible | ok: [localhost]
+2026-06-21 00:14:44,588 p=41240 u=quintero n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores] *******************
+2026-06-21 00:14:44,964 p=41240 u=quintero n=ansible | fatal: [localhost]: FAILED! => {"msg": "Failed to get information on remote file (/etc/sudoers.d/2psupervisores): Permission denied"}
+2026-06-21 00:14:44,966 p=41240 u=quintero n=ansible | PLAY RECAP *****************************************************************************
+2026-06-21 00:14:44,967 p=41240 u=quintero n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-21 00:14:44,967 p=41240 u=quintero n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-06-21 00:19:06,265 p=41495 u=quintero n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2026-06-21 00:19:06,504 p=41495 u=quintero n=ansible | ERROR! 'become' is not a valid attribute for a IncludeRole
+
+The error appears to be in '/home/quintero/UTN-FRA_SO_Examenes/202406/ansible/playbook.yml': line 5, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - include_role:
+      ^ here
+
+2026-06-21 00:20:29,616 p=41500 u=quintero n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2026-06-21 00:20:29,925 p=41500 u=quintero n=ansible | PLAY [all] *****************************************************************************
+2026-06-21 00:20:29,939 p=41500 u=quintero n=ansible | TASK [Gathering Facts] *****************************************************************
+2026-06-21 00:20:30,141 p=41500 u=quintero n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nquintero@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-21 00:20:32,478 p=41500 u=quintero n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter
+at /usr/bin/python3.10, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-21 00:20:32,478 p=41500 u=quintero n=ansible | ok: [localhost]
+2026-06-21 00:20:32,504 p=41500 u=quintero n=ansible | TASK [include_role : 2do_parcial] ******************************************************
+2026-06-21 00:20:32,558 p=41500 u=quintero n=ansible | included: 2do_parcial for localhost
+2026-06-21 00:20:32,577 p=41500 u=quintero n=ansible | TASK [2do_parcial : debug] *************************************************************
+2026-06-21 00:20:32,601 p=41500 u=quintero n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-21 00:20:32,620 p=41500 u=quintero n=ansible | TASK [2do_parcial : Crear estructura de directorios para parcial] **********************
+2026-06-21 00:20:33,325 p=41500 u=quintero n=ansible | ok: [localhost] => (item=/tmp/2do_parcial/alumno)
+2026-06-21 00:20:33,733 p=41500 u=quintero n=ansible | ok: [localhost] => (item=/tmp/2do_parcial/equipo)
+2026-06-21 00:20:33,755 p=41500 u=quintero n=ansible | TASK [2do_parcial : Generar archivo datos_alumno.txt] **********************************
+2026-06-21 00:20:34,823 p=41500 u=quintero n=ansible | ok: [localhost]
+2026-06-21 00:20:34,842 p=41500 u=quintero n=ansible | TASK [2do_parcial : Generar archivo datos_equipo.txt] **********************************
+2026-06-21 00:20:35,668 p=41500 u=quintero n=ansible | ok: [localhost]
+2026-06-21 00:20:35,685 p=41500 u=quintero n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores] *******************
+2026-06-21 00:20:36,771 p=41500 u=quintero n=ansible | changed: [localhost]
+2026-06-21 00:20:36,807 p=41500 u=quintero n=ansible | TASK [Otra tarea] **********************************************************************
+2026-06-21 00:20:36,834 p=41500 u=quintero n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2026-06-21 00:20:36,836 p=41500 u=quintero n=ansible | PLAY RECAP *****************************************************************************
+2026-06-21 00:20:36,836 p=41500 u=quintero n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-21 00:20:36,837 p=41500 u=quintero n=ansible | localhost                  : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
